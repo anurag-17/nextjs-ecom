@@ -10,17 +10,6 @@ const Category = ({ category, products, slug }) => {
     const [pageIndex, setPageIndex] = useState(1);
     const { query } = useRouter();
 
-    useEffect(() => {
-        setPageIndex(1);
-    }, [query]);
-
-    const { data, error, isLoading } = useSWR(
-        `/api/products?populate=*&[filters][categories][slug][$eq]=${slug}&pagination[page]=${pageIndex}&pagination[pageSize]=${maxResult}`,
-        fetchDataFromApi,
-        {
-            fallbackData: products,
-        }
-    );
 
     return (
         <div className="w-full md:py-20 relative">
@@ -33,9 +22,9 @@ const Category = ({ category, products, slug }) => {
 
                 {/* products grid start */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-14 px-5 md:px-0">
-                    {data?.data?.map((product) => (
+                    {/* {data?.data?.map((product) => (
                         <ProductCard key={product?.id} data={product} />
-                    ))}
+                    ))} */}
                     {/* <ProductCard />
                     <ProductCard />
                     <ProductCard />
@@ -90,7 +79,7 @@ const Category = ({ category, products, slug }) => {
 export default Category;
 
 export async function getStaticPaths() {
-    const category = await fetchDataFromApi("/api/categories?populate=*");
+    const category = await fetchDataFromApi("");
     const paths = category?.data?.map((c) => ({
         params: {
             slug: c.attributes.slug,
