@@ -24,19 +24,20 @@ const ProductDetails = ({ product, products }) => {
   const [selectedColor, setSelectedColor] = useState("");
   const [showError, setShowError] = useState(false);
   const [productPrice, setProductPrice] = useState("");
-  
+
   useEffect(() => {
     getProducts();
   }, []);
 
   const getProducts = async () => {
     try {
-      const products = await fetchDataFromApi("/api/getProducts");
-      const filterArr = products?.products?.filter((p) => {
-        return slug === p?.handle;
+      await axios.get("/api/getProducts").then((res) => {
+        const filterArr = res?.data?.products?.filter((p) => {
+          return slug === p?.handle;
+        });
+        setProductDetails(filterArr[0]);
       });
       // console.log("filterArr", filterArr[0]);
-      setProductDetails(filterArr[0]);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -159,16 +160,13 @@ const ProductDetails = ({ product, products }) => {
                               <div className="">{col?.title}</div>
                             </div>
                           );
-
                         })}
                       </div>
-                        {
-                        showError && (
-                          <div className="text-red-600 mt-3 px-2">
-                              {option?.name} selection is required
-                          </div>
-                        )
-                      }
+                      {showError && (
+                        <div className="text-red-600 mt-3 px-2">
+                          {option?.name} selection is required
+                        </div>
+                      )}
                     </Fragment>
                   ))}
                 </div>
