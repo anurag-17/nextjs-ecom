@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from 'next/router';
@@ -27,7 +27,6 @@ const Addtocart = () => {
         );
     }, [cartItems]);
 
-    console.log("cartItems",cartItems)
 
     const handlePayment = async () => {
         try {
@@ -38,6 +37,8 @@ const Addtocart = () => {
             console.log(error);
         }
     };
+
+    useEffect(()=>{},[cartItems])
 
   return (
    <>
@@ -76,7 +77,7 @@ const Addtocart = () => {
                                             Subtotal
                                         </div>
                                         <div className="text-md md:text-lg font-medium text-black">
-                                            {/* &#8377;{subTotal} */}
+                                            &#8377;{subTotal}
                                         </div>
                                     </div>
                                     <div className="text-sm md:text-md py-5 border-t mt-5">

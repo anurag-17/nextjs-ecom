@@ -48,16 +48,18 @@ const Footer = () => {
                             <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                                 Payment Options
                             </div>
-                            <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
-                                Contact Us
-                            </div>
+                            <Link href="/contact" >
+                                <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                                    Contact Us
+                                </div>
+                            </Link>
                         </div>
                         {/* MENU END */}
 
                         {/* MENU START */}
                         <div className="flex flex-col gap-3">
                             <div className="font-oswald font-medium uppercase text-sm">
-                                About nike
+                                About Us
                             </div>
                             <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                                 News
