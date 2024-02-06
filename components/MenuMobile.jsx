@@ -4,8 +4,8 @@ import { BsChevronDown } from "react-icons/bs";
 
 const data = [
   { id: 1, name: "Home", url: "/" },
-  { id: 2, name: "About", url: "/about" },
-  { id: 3, name: "Categories", subMenu: true },
+  { id: 2, name: "About", url: "/about-us" },
+//   { id: 3, name: "Categories", subMenu: true },
   { id: 4, name: "Contact", url: "/contact" },
 ];
 
@@ -23,7 +23,7 @@ const MenuMobile = ({
 }) => {
     
     return (
-        <ul className="flex flex-col md:hidden font-bold absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t text-black">
+        <ul className="flex flex-col md:hidden font-bold absolute top-[0px] py-[80px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t text-black">
             {data.map((item) => {
                 return (
                     <React.Fragment key={item.id}>
