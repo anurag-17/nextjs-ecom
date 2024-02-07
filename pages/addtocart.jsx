@@ -31,7 +31,7 @@ const Addtocart = () => {
     const handlePayment = async () => {
         try {
             setLoading(true);
-            router.push('https://demo-store-controlf5.myshopify.com/checkouts/');
+            router.push('https://demo-store-controlf5.myshopify.com/checkouts/', target="_blank");
         } catch (error) {
             setLoading(false);
             console.log(error);

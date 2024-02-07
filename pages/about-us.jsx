@@ -4,16 +4,13 @@ import React from "react";
 const AboutUs = () => {
   return (
     <section>
-      <div className="container mx-auto my-[20px] md:my-[40px] px-[20px]">
+      <div className="container mx-auto md:py-20 px-[20px]">
     
-        <div className="text-center max-w-[800px] mx-auto ">
+        <div className="text-center max-w-[800px] mx-auto  mt-8 md:mt-0">
           <div className="text-[28px] md:text-[34px] mb-5 font-semibold leading-tight">
             {" "}
             About Us
           </div>
-
-       
-
           <div className="text-md md:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
             minima pariatur consectetur cum consequuntur placeat, unde tempore

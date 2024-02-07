@@ -19,7 +19,7 @@ const Header = () => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [categories, setCategories] = useState(null);
 
-    const { cartItems } = useSelector((state) => state.cart);
+    const { cartItems,wishlist } = useSelector((state) => state.cart);
 
     const controlNavbar = () => {
         if (window.scrollY > 200) {
@@ -69,23 +69,25 @@ const Header = () => {
 
                 <div className="flex items-center gap-2 text-black">
                     {/* Icon start */}
-                    {/* <Link href="/wishlist">
+                    <Link href="/wishlist">
                         <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
                             <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
-                            <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]">
-                                5
-                            </div>
+                           {wishlist?.length > 0 && (
+                                <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]">
+                                    {wishlist?.length}
+                                </div>
+                            )}
                         </div>
-                     </Link> */}
+                     </Link>
                     {/* Icon end */}
 
                     {/* Icon start */}
                     <Link href="/addtocart">
                         <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
                             <BsCart className="text-[15px] md:text-[20px]" />
-                            {cartItems.length > 0 && (
+                            {cartItems?.length > 0 && (
                                 <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]">
-                                    {cartItems.length}
+                                    {cartItems?.length}
                                 </div>
                             )}
                         </div>

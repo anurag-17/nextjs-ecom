@@ -36,20 +36,25 @@ export const cartSlice = createSlice({
             );
         },
         addToWishlist: (state, action) => {
+            console.log(action)
             const item = state.wishlist.find(
                 (p) => p.id === action.payload.id
             );
             if (item) {
-                item.quantity++;
-                item.oneQuantityPrice = item.oneQuantityPrice * item.quantity;
+               
             } else {
-                state.cartItems.push({ ...action.payload, quantity: 1 });
+                state.wishlist.push({ ...action.payload });
             }
+        },
+        removeFromWishlist: (state, action) => {
+            state.wishlist = state.wishlist.filter(
+                (p) => p.id !== action.payload.id
+            );
         },
     },
 });
 
 // Action creators are generated for each case reducer function
-export const { addToCart, updateCart, removeFromCart ,addToWishlist} = cartSlice.actions;
+export const { addToCart, updateCart, removeFromCart ,addToWishlist, removeFromWishlist} = cartSlice.actions;
 
 export default cartSlice.reducer;

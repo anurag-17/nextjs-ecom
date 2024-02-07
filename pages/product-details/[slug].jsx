@@ -14,7 +14,7 @@ import ProductDetailsCarousel from "@/components/ProductDetailsCarousel";
 import RelatedProducts from "@/components/RelatedProducts";
 import { fetchDataFromApi } from "@/utils/api";
 import { getDiscountedPricePercentage } from "@/utils/helper";
-import { addToCart } from "@/store/cartSlice";
+import { addToCart, addToWishlist } from "@/store/cartSlice";
 
 const ProductDetails = ({ product, products }) => {
   const router = useRouter();
@@ -55,15 +55,15 @@ const ProductDetails = ({ product, products }) => {
     });
   };
 
-  const addWishlist = () => {
-    // dispatch(
-    //   addToCart({
-    //     ...productDetails,
-    //   })
-    //   );
-      console.log("wishlist",productDetails)
-  }
-  
+  // const addWishlist = () => {
+  //   dispatch(
+  //     addToCart({
+  //       ...productDetails,
+  //     })
+  //     );
+  //   console.log("wishlist", productDetails);
+  // };
+
   return (
     <>
       <div className="w-full md:py-20">
@@ -204,12 +204,20 @@ const ProductDetails = ({ product, products }) => {
               >
                 Add to Cart
               </button>
-{/* 
-              <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10"
-              onClick={()=>addWishlist(productDetails)}>
+
+              <button
+                className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10"
+                onClick={() => {
+                  dispatch(
+                    addToWishlist({
+                      ...productDetails,
+                    })
+                    );
+                }}
+              >
                 Whishlist
                 <IoMdHeartEmpty size={20} />
-              </button> */}
+              </button>
               {/* BUTTON END */}
 
               <div>

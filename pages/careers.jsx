@@ -73,7 +73,7 @@ const CareersPage = () => {
             ))}
           </ul>
 
-          <h3 className="text-[20px] md:text-[24px] my-3     font-semibold leading-tight">
+          <h3 className="text-[20px] md:text-[24px] my-3 font-semibold leading-tight">
             Why Join Us?
           </h3>
           <ul>
@@ -99,10 +99,10 @@ const CareersPage = () => {
             </li>
           </ul>
 
-          <h3>How to Apply</h3>
+          <h3 className="text-[20px] md:text-[24px] my-3 font-semibold leading-tight" >How to Apply</h3>
           <p>
             Ready to take the next step in your career? Send your resume and
-            cover letter to [email address]. Be sure to include the position
+            cover letter to <a href="mailto:#" >abc@gmail.com</a> . Be sure to include the position
             you're applying for in the subject line. We look forward to hearing
             from you!
           </p>
