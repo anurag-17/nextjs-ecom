@@ -10,7 +10,7 @@ const Contact = () => {
       <div className=" py-[30px] my-6 contact-page">
         <div className="absolute lg:w-[50%] sm:w-[60%] w-full px-[20px] ">
         <div className=" ">
-          <form action="" className="">
+          <form  className="">
             <div className="flex flex-col gap-4 justify-center  md:max-w-[80%] mx-auto ">
               <div className="text-left ">
                 {/* <p className="text-[15px] font-[400] leading-[26px] text-gray-400 mb-4 text-[#494949]">

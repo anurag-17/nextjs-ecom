@@ -5,19 +5,19 @@ const CareersPage = () => {
   const jobOpenings = [
     {
       title: "Software Engineer",
-      location: "[City, State]",
+      location: "Indore, MP",
       description:
         "We're seeking a skilled and motivated software engineer to join our development team. In this role, you'll have the opportunity to work on exciting projects and contribute to the growth of our platform.",
     },
     {
       title: "Marketing Specialist",
-      location: "[City, State]",
+      location: "Indore, MP",
       description:
         "We're looking for a dynamic marketing specialist to help us create engaging campaigns, manage social media channels, and drive brand awareness. If you have a passion for storytelling and a knack for analytics, we want to hear from you!",
     },
     {
       title: "Customer Service Representative",
-      location: "[City, State]",
+      location: "Indore, MP",
       description:
         "Do you have excellent communication skills and a knack for problem-solving? Join our customer service team and help us deliver exceptional support to our valued customers.",
     },
@@ -27,11 +27,11 @@ const CareersPage = () => {
     <div className="container mx-auto my-[20px] md:my-[40px] px-[20px]">
       <div className="w-full max-w-[1200px] 2xl:px-0 mx-auto px-[20px]  flex flex-col justify-between items-center">
         <div className="careers-page">
-          <h2 className="text-[28px] md:text-[34px] mb-5 font-semibold text-center leading-tight">
+          {/* <h2 className="text-[28px] md:text-[34px] mb-5 font-semibold text-center leading-tight">
             Join Our Team
-          </h2>
+          </h2> */}
 
-          <div className="grid md:grid-cols-2  gap-10">
+          <div className="grid md:grid-cols-2 gap-10">
             <div className="py-[15px]">
               <Image
                 src="/careers.avif"
@@ -41,22 +41,23 @@ const CareersPage = () => {
               />
             </div>
             <div className="py-[15px]">
-              <p className="md:max-w-[80%] mx-auto text-[16px] mb-5 leading-tight">
-                Are you passionate about innovation, creativity, and making a
-                difference? If so, we'd love to hear from you! At our company , we're always on the lookout for talented individuals who
-                share our vision and values.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas delectus temporibus laboriosam, soluta inventore qui debitis praesentium nobis ex quaerat ipsam exercitationem !
+              <h2 className="text-2xl md:text-3xl font-semibold mb-5">
+                Join Our Team
+              </h2>
+
+              <p className="text-[16px] mb-5 leading-tight">
+              Are you driven by a passion for innovation, creativity, and making a tangible impact? If so, we invite you to explore exciting career opportunities at Our Company. We believe in fostering a dynamic and inclusive work environment where talented individuals can thrive and contribute to meaningful projects.
               </p>
-              <p className="md:max-w-[80%] mx-auto text-[16px] mb-5 leading-tight">
-             
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas delectus temporibus laboriosam, soluta inventore qui debitis praesentium nobis ex quaerat ipsam exercitationem autem voluptatum! Distinctio, facilis? Possimus debitis porro quisquam dolorum? Et qui pariatur magnam distinctio reiciendis illo, ipsa adipisci!
+
+              <p className="text-[16px] mb-5 leading-tight">
+              Our team is comprised of diverse professionals who share a common goal of delivering exceptional results while maintaining a strong commitment to our core values. We value collaboration, integrity, and continuous learning, and we're dedicated to providing our employees with the support and resources they need to succeed.
               </p>
             </div>
           </div>
 
-              <h3 className="text-[20px] md:text-[24px] my-5 font-semibold leading-tight">
-                Current Openings
-              </h3>
+          <h3 className="text-[20px] md:text-[24px] my-5 font-semibold leading-tight">
+            Current Openings
+          </h3>
           <ul>
             {jobOpenings.map((job, index) => (
               <li key={index} className="py-[20px]">
@@ -99,12 +100,14 @@ const CareersPage = () => {
             </li>
           </ul>
 
-          <h3 className="text-[20px] md:text-[24px] my-3 font-semibold leading-tight" >How to Apply</h3>
+          <h3 className="text-[20px] md:text-[24px] my-3 font-semibold leading-tight">
+            How to Apply
+          </h3>
           <p>
             Ready to take the next step in your career? Send your resume and
-            cover letter to <a href="mailto:#" >abc@gmail.com</a> . Be sure to include the position
-            you're applying for in the subject line. We look forward to hearing
-            from you!
+            cover letter to <a href="mailto:#">abc@gmail.com</a> . Be sure to
+            include the position you're applying for in the subject line. We
+            look forward to hearing from you!
           </p>
         </div>
       </div>

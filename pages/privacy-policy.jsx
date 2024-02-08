@@ -6,8 +6,8 @@ const TermsAndConditionsPage = () => {
     <div className="container mx-auto my-[20px] md:my-[40px] px-[20px]">
     <div className="w-full max-w-[1200px] 2xl:px-0 mx-auto px-[20px]  flex flex-col justify-between items-center">
     <div className="terms-and-conditions-page">
-      <h2 className='text-[28px] md:text-[34px] mb-5 font-semibold leading-tight'>Privacy Policy</h2>
-      <p>Welcome to E-commerce website. These Privacy Policy outline the rules and regulations for the use of E-commerce website's Website, located at E-commerce website.</p>
+      <h2 className='text-[28px] md:text-[34px] mb-5 font-semibold leading-tight text-center'>Privacy Policy</h2>
+      <p className='w-full md:max-w-[60%] mx-auto pb-6 text-center' >Welcome to E-commerce website. These Privacy Policy outline the rules and regulations for the use of    <a href=" https://nextjs-ecom-ashy.vercel.app/ " className="underline font-semibold"> E-commerce website </a>.</p>
       
       <h3 className='text-[16px] mt-5 font-semibold leading-tight'>Cookies</h3>
       <p>We employ the use of cookies. By accessing E-commerce website, you agreed to use cookies in agreement with the E-commerce website's Privacy Policy.</p>
@@ -24,15 +24,23 @@ const TermsAndConditionsPage = () => {
       </ul>
 
 
-      <h3 className='text-[16px] mt-5 font-semibold leading-tight'>Lorem Ipsum</h3>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam earum officiis nostrum ullam dicta ipsum sed, laudantium repellendus temporibus reiciendis excepturi repellat sunt harum ratione saepe. Harum tenetur nam nesciunt perspiciatis iusto adipisci cumque fugit maiores, nemo dolore illo fuga molestias voluptatibus vitae architecto unde quas itaque, ducimus voluptatum ab.</p>
-
-      <h3 className='text-[16px] mt-5 font-semibold leading-tight'>Lorem ipsum dolor,</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, cumque eligendi itaque repudiandae corrupti minima exercitationem facilis pariatur? Rerum repudiandae iure ea aliquid debitis et necessitatibus qui veritatis quae ab similique, inventore earum, dicta at cupiditate. Culpa ipsum iure unde at, officia minus, ea quia dolores illo incidunt impedit facilis molestias ab. Sequi minima fugiat minus enim quam! Dolore, magni.</p>
-
-      {/* Continue with the rest of the Privacy Policy content here */}
-
-    </div>
+      <h3 className='text-[16px] mt-5 font-semibold leading-tight'>Data Collection and Usage</h3>
+  <p>We collect certain personal information from you when you register on our site, place an order, subscribe to our newsletter, respond to a survey or fill out a form. This information may include your name, email address, mailing address, phone number, credit card information, or other details. We use this information for purposes such as processing transactions, providing customer service, improving our website, and sending periodic emails.</p>
+  <p>We may also collect non-personal information about your visit to our website through the use of cookies, which help us analyze and improve user experience.</p>
+  
+  <h3 className='text-[16px] mt-5 font-semibold leading-tight'>Security</h3>
+  <p>We are committed to ensuring that your information is secure. We have implemented suitable physical, electronic, and managerial procedures to safeguard and secure the information we collect online to prevent unauthorized access or disclosure.</p>
+  
+  <h3 className='text-[16px] mt-5 font-semibold leading-tight'>Third-Party Services</h3>
+  <p>We may employ third-party companies and individuals to facilitate our website, provide services on our behalf, perform website-related services, or assist us in analyzing how our website is used. These third parties have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+  
+  <h3 className='text-[16px] mt-5 font-semibold leading-tight'>Changes to This Privacy Policy</h3>
+  <p>We reserve the right to update or change our privacy policy at any time. Any changes will be posted on this page, and the date of the last update will be indicated at the top of the page. You are advised to review this privacy policy periodically for any changes.</p>
+  
+  <h3 className='text-[16px] mt-5 font-semibold leading-tight'>Contact Us</h3>
+  <p>If you have any questions or concerns about our privacy policy, please contact us at 
+  <a href="mailto:privacy@ecommercewebsite.com." className="underline font-semibold"> privacy@ecommercewebsite.com. </a></p>
+</div>
     </div>
     </div>
   );
