@@ -15,6 +15,7 @@ import RelatedProducts from "@/components/RelatedProducts";
 import { fetchDataFromApi } from "@/utils/api";
 import { getDiscountedPricePercentage } from "@/utils/helper";
 import { addToCart, addToWishlist } from "@/store/cartSlice";
+import Skeleton from "react-loading-skeleton";
 
 const ProductDetails = ({ product, products }) => {
   const router = useRouter();
@@ -24,8 +25,8 @@ const ProductDetails = ({ product, products }) => {
   const [selectedColor, setSelectedColor] = useState("");
   const [showError, setShowError] = useState(false);
   const [productPrice, setProductPrice] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  console.log(slug)
 
   useEffect(() => {
     getProducts();
@@ -57,15 +58,15 @@ const ProductDetails = ({ product, products }) => {
     });
   };
 
-  // const addWishlist = () => {
-  //   dispatch(
-  //     addToCart({
-  //       ...productDetails,
-  //     })
-  //     );
-  //   console.log("wishlist", productDetails);
-  // };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); 
 
+    return () => clearTimeout(timer);
+  }, []);
+
+ 
   return (
     <>
       <div className="w-full md:py-20">
@@ -79,12 +80,26 @@ const ProductDetails = ({ product, products }) => {
             <div className="flex-[1] py-3">
               {/* PRODUCT TITLE */}
               <div className="text-[34px] font-semibold mb-2 leading-tight">
-                {productDetails?.title}
+              {
+                loading ? 
+                <div style={{ height: "80px", backgroundColor: "#f0f0f0" }}>
+                <Skeleton height={80} />
+              </div>
+              :
+                productDetails?.title
+              }
               </div>
               <div className="text-lg font-semibold mb-5">
-                {productDetails?.vendor}
+              {
+                loading ? 
+                <div style={{ height: "40px", backgroundColor: "#f0f0f0" }} >
+                <Skeleton height={40} />
               </div>
-
+              :
+              productDetails?.vendor
+            }
+            </div>
+           
               {/* PRODUCT SIZE RANGE START */}
               <div className="mb-10">
                 {productDetails?.variants?.map((items, i) => (
@@ -167,6 +182,7 @@ const ProductDetails = ({ product, products }) => {
                                 setProductPrice(col?.price);
                               }}
                             >
+                              
                               <div className="">{col?.title}</div>
                             </div>
                           );
