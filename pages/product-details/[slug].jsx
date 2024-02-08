@@ -25,9 +25,11 @@ const ProductDetails = ({ product, products }) => {
   const [showError, setShowError] = useState(false);
   const [productPrice, setProductPrice] = useState("");
 
+  console.log(slug)
+
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [slug]);
 
   const getProducts = async () => {
     try {
