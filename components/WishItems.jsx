@@ -8,6 +8,9 @@ const WishListItem = ({ data }) => {
   // const p = data;
 
   const dispatch = useDispatch();
+  const handleWishlistRemove = ()=>{
+    dispatch(removeFromWishlist({id: data?.id }))
+  }
 
   return (
     <div className="flex py-5 gap-3 md:gap-5 border-b">
@@ -45,10 +48,10 @@ const WishListItem = ({ data }) => {
           {data?.title}
         </div>
       </div>
-      {/* <RiDeleteBin6Line
-        onClick={() => dispatch(removeFromWishlist({ id: data?.handle }))}
+      <RiDeleteBin6Line
+        onClick={handleWishlistRemove}
         className="cursor-pointer text-black/[0.5] hover:text-black text-[16px] md:text-[20px]"
-      /> */}
+      />
     </div>
   );
 };

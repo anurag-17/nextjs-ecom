@@ -18,6 +18,9 @@ const CartItem = ({ data }) => {
         };
         dispatch(updateCart(payload));
     };
+    const handleRemoveFromCart = () => {
+        dispatch(removeFromCart({ id: data.id }));
+    };
     return (
         <div className="flex py-5 gap-3 md:gap-5 border-b">
             {/* IMAGE START */}
@@ -107,9 +110,7 @@ const CartItem = ({ data }) => {
                         </div>
                     </div>
                     <RiDeleteBin6Line
-                        onClick={() =>
-                            dispatch(removeFromCart({ id: data?.handle }))
-                        }
+                        onClick={handleRemoveFromCart}
                         className="cursor-pointer text-black/[0.5] hover:text-black text-[16px] md:text-[20px]"
                     />
                 </div>

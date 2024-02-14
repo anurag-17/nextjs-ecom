@@ -30,9 +30,9 @@ const ProductCard = ({ data }) => {
                         onLoad={() => setLoading(false)} 
                         src={data?.image?.src}
                         alt={data?.image?.alt ? data?.image?.alt : "loading"}
-                        className="w-[300px] h-[300px] mx-auto"
+                        className="w-[200px] md:w-[300px] h-[200px] md:h-[300px] mx-auto"
                     />
-                    <h2 className="text-lg font-medium text-center text-black/[0.9]">{data?.title}</h2>
+                    <h2 className="text-[12px] md:text-lg font-medium text-center text-black/[0.9]">{data?.title}</h2>
                 </>
             )}
         </Link>
