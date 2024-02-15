@@ -5,8 +5,8 @@ import { useRouter } from 'next/router';
 
 import Wrapper from "@/components/Wrapper";
 import CartItem from "@/components/CartItem";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { removeAllFromCart } from "@/store/cartSlice";
 import { makePaymentRequest } from "@/utils/api";
 import { loadStripe } from "@stripe/stripe-js";
 const stripePromise = loadStripe(
@@ -15,7 +15,7 @@ const stripePromise = loadStripe(
 
 const Addtocart = () => {
 
-    
+    const dispatch = useDispatch();
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const { cartItems } = useSelector((state) => state.cart);
@@ -61,6 +61,7 @@ const Addtocart = () => {
                                 <div className="text-lg font-bold">
                                     Cart Items
                                 </div>
+                                <button className="px-3 py-2 bg-neutral-700 rounded-lg hover:text-white  " onClick={()=>dispatch(removeAllFromCart())}>Remove All</button>
                                 {cartItems.map((item) => (
                                     <CartItem key={item.id} data={item} />
                                 ))}
@@ -90,13 +91,15 @@ const Addtocart = () => {
                                 </div>
 
                                 {/* BUTTON START */}
+                                <Link target="_blank" href='https://www.controlf5.in/'>
                                 <button
                                     className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center"
-                                    onClick={handlePayment}
+                                    // onClick={handlePayment}
                                 >
                                     Checkout
                                     {loading && <img src="/spinner.svg" />}
                                 </button>
+                                </Link>
                                 {/* BUTTON END */}
                             </div>
                             {/* SUMMARY END */}

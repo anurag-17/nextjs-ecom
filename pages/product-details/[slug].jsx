@@ -45,8 +45,8 @@ const ProductDetails = ({ product, products }) => {
     }
   };
 
-  const notify = () => {
-    toast.success("Success. Check your cart!", {
+  const notify = (message) => {
+    toast.success(message, {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -57,6 +57,9 @@ const ProductDetails = ({ product, products }) => {
       theme: "dark",
     });
   };
+  const notifyWishlist=()=>{
+    notify("Success. Check your wishlist!")
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -216,7 +219,7 @@ const ProductDetails = ({ product, products }) => {
                         oneQuantityPrice: productPrice,
                       })
                     );
-                    notify();
+                    notify('Success. Check your cart!');
                   }
                 }}
               >
@@ -231,6 +234,7 @@ const ProductDetails = ({ product, products }) => {
                       ...productDetails,
                     })
                     );
+                    notifyWishlist();
                 }}
               >
                 Whishlist

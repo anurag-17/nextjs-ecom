@@ -57,8 +57,8 @@ const CartItem = ({ data }) => {
                     {data?.title}
                 </div>
 
-                <div className="flex items-center justify-between mt-5">
-                    <div className="flex items-center gap-2 md:gap-10 text-black/[0.5] text-sm md:text-md">
+                <div className="flex  items-center justify-between mt-5">
+                    <div className="flex flex-wrap items-center gap-2 md:gap-10 text-black/[0.5] text-sm md:text-md">
                         <div className="flex items-center gap-1">
                             <div className="font-semibold">Size:</div>
                             <select

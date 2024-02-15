@@ -12,11 +12,13 @@ const Footer = () => {
           {/* MENU START */}
           <div className="flex flex-col gap-3 max-w-[500px]">
           <Link href="/">
-            <h5 className="text-[20px] font-medium">  E-commerce Website </h5>
+            <h5 className="text-[18px] md:text-[20px] font-medium">  E-commerce Website </h5>
             </Link>
+            <div className="text-[12px] md:text-[16px]">
             At E-commerce Website , we believe in transparency, integrity, and
             innovation. We're dedicated to continuously improving our offerings
             and ensuring your satisfaction.
+            </div>
             {/* <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
               Find a store
             </div>
@@ -36,22 +38,8 @@ const Footer = () => {
           {/* MENU END */}
 
           {/* NORMAL MENU START */}
-          <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] shrink-0">
-            <div className="flex flex-col gap-3">
-              {/* <div className="font-oswald font-medium uppercase text-sm">
-                get help
-              </div>
-              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
-                Order Status
-              </div>
-              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
-                Delivery
-              </div>
-
-              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
-                Payment Options
-              </div> */}
-            </div>
+          <div className="flex gap-[0px] md:gap-[75px] lg:gap-[100px] shrink-0">
+        
             {/* MENU END */}
 
             {/* MENU START */}
@@ -93,26 +81,26 @@ const Footer = () => {
               // onClick={() =>
               //     window.open("https://facebook.com", "_blank")
               // }
-              className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer"
+              className="w-7 md:w-10 h-7 md:h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer"
             >
-              <FaFacebookF size={20} />
+              <FaFacebookF className="w-[10px] md:w-[20px]" size={20} />
             </div>
           </Link>
           <Link
             href="https://twitter.com"
             target="_blank"
-            className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer"
+            className="w-7 md:w-10 h-7 md:h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer"
           >
-            <FaTwitter size={20} />
+            <FaTwitter className="w-[15px] md:w-[20px]" size={20} />
           </Link>
           <Link href="https://youtube.com" target="_blank">
-            <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer">
-              <FaYoutube size={20} />
+            <div className="w-7 md:w-10 h-7 md:h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer">
+              <FaYoutube className="w-[15px] md:w-[20px]" size={20} />
             </div>
           </Link>
           <Link href="https://youtube.com" target="_blank">
-            <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer">
-              <FaInstagram size={20} />
+            <div className="w-7 md:w-10 h-7 md:h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black hover:bg-white/[0.5] cursor-pointer">
+              <FaInstagram className="w-[15px] md:w-[20px]" size={20} />
             </div>
           </Link>
         </div>
