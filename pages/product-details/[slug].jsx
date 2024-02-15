@@ -82,7 +82,7 @@ const ProductDetails = ({ product, products }) => {
 
             <div className="flex-[1] py-3">
               {/* PRODUCT TITLE */}
-              <div className="text-[34px] font-semibold mb-2 leading-tight">
+              <div className="text-[25px] md:text-[34px] font-semibold mb-2 leading-tight">
               {
                 loading ? 
                 <div style={{ height: "80px", backgroundColor: "#f0f0f0" }}>
@@ -110,7 +110,7 @@ const ProductDetails = ({ product, products }) => {
                     {items?.title === selectedColor && (
                       <div key={i}>
                         <div className="flex md:items-center md:flex-row flex-col">
-                          <p className="mr-2 text-lg font-semibold">
+                          <p className="mr-2 text-[14px] md:text-lg font-semibold">
                             MRP : &#8377;{items?.price}
                           </p>
                           {items?.compare_at_price && (
@@ -128,10 +128,10 @@ const ProductDetails = ({ product, products }) => {
                             </>
                           )}
                         </div>
-                        <div className="text-md font-medium text-black/[0.5]">
+                        <div className="text-[12px] md:text-md font-medium text-black/[0.5]">
                           incl. of taxes|
                         </div>
-                        <div className="text-md font-medium text-black/[0.5] mb-2">
+                        <div className="text-[12px] md:text-md font-medium text-black/[0.5] mb-2">
                           {`(Also includes all applicable duties)`}|
                         </div>
                       </div>
@@ -177,7 +177,7 @@ const ProductDetails = ({ product, products }) => {
                           return (
                             <div
                               key={inx}
-                              className={`border rounded-md text-center py-3 font-medium hover:text-${colLower} text-${colLower} cursor-pointer
+                              className={`text-[13px] md:text-[16px] border rounded-md text-center py-3 font-medium hover:text-${colLower} text-${colLower} cursor-pointer
                         ${selectedColor === col?.title ? `bg-[#f3f3f3]` : ""}`}
                               onClick={() => {
                                 setSelectedColor(col?.title);
@@ -203,7 +203,7 @@ const ProductDetails = ({ product, products }) => {
 
               {/*BUTTON START */}
               <button
-                className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+                className="text-[14px] md:text-[16px] w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
                 onClick={() => {
                   if (!selectedColor) {
                     setShowError(true);
@@ -227,7 +227,7 @@ const ProductDetails = ({ product, products }) => {
               </button>
 
               <button
-                className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10"
+                className="text-[14px] md:text-[16px] w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10"
                 onClick={() => {
                   dispatch(
                     addToWishlist({
@@ -243,7 +243,7 @@ const ProductDetails = ({ product, products }) => {
               {/* BUTTON END */}
 
               <div>
-                <div className="text-lg font-bold mb-5">Product Details</div>
+                <div className="text-[16px] md:text-lg font-bold mb-5">Product Details</div>
                 <div className="markdown text-md mb-5">
                   {/* <ReactMarkdown> */}
 
@@ -254,7 +254,7 @@ const ProductDetails = ({ product, products }) => {
                       }}
                     />
                   ) : (
-                    "No details available"
+                    <p className="text-[14px]">No details available</p>
                   )}
                   {/* </ReactMarkdown> */}
                 </div>

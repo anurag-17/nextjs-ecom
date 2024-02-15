@@ -7,11 +7,11 @@ const Contact = () => {
         {" "}
         Contact Us
       </div>
-      <div className=" py-[30px] my-6 contact-page">
-        <div className="absolute lg:w-[50%] sm:w-[60%] w-full px-[20px] ">
+      <div className=" py-[30px] my-2 md:my-6 contact-page">
+        <div className="absolute lg:w-[50%] sm:w-[60%] w-full px-[20px]">
         <div className=" ">
           <form  className="">
-            <div className="flex flex-col gap-4 justify-center  md:max-w-[80%] mx-auto ">
+            <div className="flex flex-col gap-0 md:gap-4 justify-center  md:max-w-[80%] mx-auto ">
               <div className="text-left ">
                 {/* <p className="text-[15px] font-[400] leading-[26px] text-gray-400 mb-4 text-[#494949]">
                        Welcome back! Please enter your details
@@ -70,7 +70,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   // className="w-full bg-[#1f2432] hover:text-[#1f2432] font-medium text-white p-2 rounded-lg  hover:bg-white hover:border hover:border-gray-300 h-[50px] login-btn"
-                  className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+                  className="w-full py-2 md:py-4 rounded-full bg-black text-white gtext-[14px] md:text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
                 >
                   Contact Us
                 </button>

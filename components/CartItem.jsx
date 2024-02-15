@@ -22,9 +22,9 @@ const CartItem = ({ data }) => {
         dispatch(removeFromCart({ id: data.id }));
     };
     return (
-        <div className="flex py-5 gap-3 md:gap-5 border-b">
+        <div className="flex flex-col md:flex-row py-5 gap-3 md:gap-5 border-b">
             {/* IMAGE START */}
-            <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
+            <div className="flex mx-auto shrink-0 aspect-square  md:w-[120px]">
                 <Image
                     src={data?.image?.src}
                     alt={data?.image?.alt}

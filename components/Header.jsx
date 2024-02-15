@@ -66,13 +66,13 @@ const Header = () => {
 
     return (
         <header
-            className={`w-full h-[100px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-300
+            className={`w-full h-[60px] md:h-[100px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-300
              ${show ? "sticy top-0 bg-[#f3f3f3] border border-red-50 shadow-xl" : ""}`}
         >
             <Wrapper className="h-[80px] flex justify-between items-center">
                 <Link href="/">
                     {/* <img src="/logo.svg" className="w-[40px] md:w-[60px]" /> */}
-                   <span className="text-[18px] font-semibold"> E-Commerce Website</span>
+                   <span className="text-[15px] md:text-[18px] font-semibold"> E-Commerce Website</span>
                 </Link>
 
                 <Menu
@@ -117,7 +117,7 @@ const Header = () => {
                     </Link>
                     {/* Icon end */}
                     <div onClick={()=>setDialogMatch(true)}
-                     className=" flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
+                     className="text-[14px] md:text-[16px] flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
                      Login
                     </div>
 

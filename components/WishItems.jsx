@@ -50,8 +50,10 @@ const WishListItem = ({ data }) => {
       </div>
       <RiDeleteBin6Line
         onClick={handleWishlistRemove}
-        className="cursor-pointer text-black/[0.5] hover:text-black text-[16px] md:text-[20px]"
+        data-tip="Delete"
+        className="cursor-pointer text-black/[0.5] hover:text-black text-[22px] md:text-[20px]"
       />
+     
     </div>
   );
 };

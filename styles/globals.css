@@ -140,5 +140,5 @@
   }
 
   .login-input{
-    @apply h-[48px] border border-[#f3f3f3]  px-4 focus-visible:outline-none
+    @apply  h-[35px] md:h-[48px] border border-[#f3f3f3]  px-4 focus-visible:outline-none
   }

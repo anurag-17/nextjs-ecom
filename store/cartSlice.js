@@ -46,6 +46,9 @@ export const cartSlice = createSlice({
     removeAllFromCart: (state, action) => {
       state.cartItems = [];
     },
+    removeAllFromWishlist : (state,action)=>{
+        state.wishlist = [];
+    }
   },
 });
 
@@ -55,6 +58,7 @@ export const {
   removeFromCart,
   addToWishlist,
   removeFromWishlist,
+  removeAllFromWishlist,
   removeAllFromCart,
 } = cartSlice.actions;
 
